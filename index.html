@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carnet de Cocktails</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-lime-50 to-emerald-100 min-h-screen flex flex-col">
+  <header class="p-6 text-center">
+    <h1 class="text-4xl font-extrabold tracking-tight text-emerald-700 drop-shadow-md">
+      Mon Carnet de Cocktails &amp; Mocktails
+    </h1>
+    <p class="mt-2 text-gray-600">Scanne le QR code, découvre la carte&nbsp;!</p>
+  </header>
+
+  <main class="flex-1 container mx-auto px-4">
+    <div id="cocktail-list" class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+  </main>
+
+  <footer class="text-center text-xs text-gray-500 py-4">
+    Fièrement brassé avec <span class="font-semibold">HTML</span>, <span class="font-semibold">Tailwind&nbsp;CSS</span> &amp; <span class="font-semibold">JavaScript</span>.
+  </footer>
+
+  <script>
+    // Chargement dynamique des recettes depuis data.json
+    fetch('data.json')
+      .then(response => response.json())
+      .then(displayCocktails)
+      .catch(err => console.error('Erreur de chargement du catalogue :', err));
+
+    function displayCocktails(data) {
+      const list = document.getElementById('cocktail-list');
+      data.forEach(cocktail => {
+        const card = document.createElement('div');
+        card.className = 'bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col items-center p-4 hover:scale-[1.02] transition ease-in-out';
+
+        const img = document.createElement('img');
+        img.src = `images/${cocktail.image}`;
+        img.alt = cocktail.name;
+        img.className = 'w-40 h-40 object-cover rounded-xl';
+
+        const title = document.createElement('h2');
+        title.textContent = cocktail.name;
+        title.className = 'mt-4 text-xl font-bold text-emerald-800';
+
+        const type = document.createElement('p');
+        type.textContent = cocktail.type || 'Boisson';
+        type.className = 'text-sm text-gray-500';
+
+        const ingList = document.createElement('ul');
+        ingList.className = 'mt-3 text-sm list-disc list-inside text-gray-700 text-left';
+        cocktail.ingredients.forEach(i => {
+          const li = document.createElement('li');
+          li.textContent = i;
+          ingList.appendChild(li);
+        });
+
+        card.appendChild(img);
+        card.appendChild(title);
+        card.appendChild(type);
+        card.appendChild(ingList);
+        list.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

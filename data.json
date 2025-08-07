@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Margarita",
+    "type": "Cocktail",
+    "image": "margarita.png",
+    "ingredients": [
+      "4 cl tequila",
+      "2 cl triple sec (Cointreau)",
+      "2 cl jus de citron vert frais",
+      "Bord de verre givré au sel (optionnel)"
+    ],
+    "glass": "Verre à margarita (coupette)",
+    "story": "Créée dans les années 1930-40, la Margarita est devenue un classique incontournable, parfaite pour les amateurs d’agrumes et de tequila."
+  }
+]

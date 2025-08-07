@@ -39,5 +39,19 @@
   ],
   "glass": "Verre highball ou tumbler",
   "story": "Variation rapide du punch planteur, axée sur l’ananas ; fraîche, fruitée et légèrement épicée grâce au rhum."
+},
+
+  {
+  "name": "Scotch Peach Tea",
+  "type": "Cocktail",
+  "image": "scotch_peach_tea.png",
+  "ingredients": [
+    "Aberlour 10 (single malt)",
+    "Thé noir froid",
+    "Sirop de pêche",
+    "Jus de citron frais"
+  ],
+  "glass": "Verre highball / Collins",
+  "story": "Un twist désaltérant où la douceur du sirop de pêche rencontre le caractère malté du Scotch, relevé par la fraîcheur du citron."
 }
 ]

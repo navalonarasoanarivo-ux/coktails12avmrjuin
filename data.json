@@ -16,7 +16,7 @@
   {
     "name": "Old Fashioned",
     "type": "Cocktail",
-    "image": "old fashioned.png",
+    "image": "old_fashioned.png",
     "ingredients": [
       "Whiskey Bulleit Bourbon",
       "Angostura bitters",

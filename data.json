@@ -25,5 +25,19 @@
     ],
     "glass": "Verre rocks (old fashioned)",
     "story": "Un des tout premiers cocktails (1860-1880). Simple, puissant, subtilement épicé grâce aux bitters."
-  }
+  },
+
+  {
+  "name": "Planteur Express Ananas",
+  "type": "Cocktail",
+  "image": "planteur_ananas.png",
+  "ingredients": [
+    "Rhum blanc (Dzama cuvée blanche)",
+    "Jus d’ananas",
+    "Jus de citron vert frais",
+    "Sirop de grenadine"
+  ],
+  "glass": "Verre highball ou tumbler",
+  "story": "Variation rapide du punch planteur, axée sur l’ananas ; fraîche, fruitée et légèrement épicée grâce au rhum."
+}
 ]
